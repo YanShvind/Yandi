@@ -13,30 +13,50 @@ struct WelcomeView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Добро пожаловать!")
+            ZStack {
+                Image("WelcomeImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                    .padding(.horizontal)
+            }
+            
+            Text("Станьте сегодня лучше, чем вчера!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-
-            Button(action: onLoginTap) {
-                Text("Войти")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                .foregroundColor(Color(hex: "#1F41BB"))
+            
+            Text("Учитесь, работайте, прокачивайте свои скилы вместе с нами! Становитесь лучшей версией себя!")
+                .padding()
+            
+            HStack {
+                Button(action: onLoginTap) {
+                    Text("Войти")
+                        .frame(width: 160, height: 60)
+                        .background(Color(hex: "#1F41BB"))                     
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .cornerRadius(10)
+                        .shadow(color: Color(hex: "#1F41BB"), radius: 3, x: 0, y: 1)
+                }
+                
+                Button(action: onRegisterTap) {
+                    Text("Регистрация")
+                        .frame(width: 160, height: 60)
+                        .background(Color(.systemBackground))
+                        .foregroundColor(.primary)
+                        .fontWeight(.bold)
+                        .cornerRadius(10)
+                }
             }
-            .padding(.horizontal, 40)
-
-            Button(action: onRegisterTap) {
-                Text("Регистрация")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding(.horizontal, 40)
+            .padding(.top, 70)
         }
         .padding()
     }
+}
+
+#Preview {
+    WelcomeView(onLoginTap: {}, onRegisterTap: {})
 }
