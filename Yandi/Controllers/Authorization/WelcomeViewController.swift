@@ -34,6 +34,9 @@ final class WelcomeViewController: UIViewController {
             hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         hostingController.didMove(toParent: self)
+        
+        print("Переход на экран входа")
+
     }
     
     
