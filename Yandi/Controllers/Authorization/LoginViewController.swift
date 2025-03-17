@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  LoginViewController.swift
 //  Yandi
 //
 //  Created by Yan Shvyndikov on 17.03.2025.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class WelcomeViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +17,12 @@ final class WelcomeViewController: UIViewController {
     }
     
     private func setupSwiftUIView() {
-        let welcomeView = WelcomeSwiftUIView(
+        let loginView = LoginSwiftUIView(
             onLoginTap: { [weak self] in self?.goToLogin() },
-            onRegisterTap: { [weak self] in self?.goToRegister() }
+            haveAccountTap: { [weak self] in self?.goToRegister() }
         )
 
-        let hostingController = UIHostingController(rootView: welcomeView)
+        let hostingController = UIHostingController(rootView: loginView)
         addChild(hostingController)
         view.addSubview(hostingController.view)
 
@@ -36,11 +36,9 @@ final class WelcomeViewController: UIViewController {
         hostingController.didMove(toParent: self)
     }
     
-    
     private func goToLogin() {
-        let loginViewController = LoginViewController()
-        loginViewController.modalPresentationStyle = .fullScreen
-        present(loginViewController, animated: true, completion: nil)
+        print("Переход на главный экран")
+        // navigationController?.pushViewController(LoginViewController(), animated: true)
     }
 
     private func goToRegister() {

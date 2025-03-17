@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
+struct WelcomeSwiftUIView: View {
     var onLoginTap: () -> Void
     var onRegisterTap: () -> Void
 
@@ -58,5 +58,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView(onLoginTap: {}, onRegisterTap: {})
+    WelcomeSwiftUIView(onLoginTap: {}, onRegisterTap: {})
 }
