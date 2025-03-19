@@ -17,6 +17,8 @@
 		6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */; };
 		6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */; };
 		6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */; };
+		6D3D46692D8B455900F3E6E1 /* NotesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */; };
+		6D3D466C2D8B835900F3E6E1 /* NoteTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D466B2D8B835900F3E6E1 /* NoteTaskModel.swift */; };
 		6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A3E2D859D2F00C64705 /* AppDelegate.swift */; };
 		6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A402D859D2F00C64705 /* SceneDelegate.swift */; };
 		6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A422D859D2F00C64705 /* TabBarViewController.swift */; };
@@ -37,6 +39,8 @@
 		6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSwiftUIView.swift; sourceTree = "<group>"; };
+		6D3D466B2D8B835900F3E6E1 /* NoteTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTaskModel.swift; sourceTree = "<group>"; };
 		6D997A3B2D859D2F00C64705 /* Yandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D997A3E2D859D2F00C64705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D997A402D859D2F00C64705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		6D3D46572D8B062000F3E6E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 		6D3D46592D8B064400F3E6E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6D3D466A2D8B834300F3E6E1 /* Notes */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -112,6 +118,14 @@
 			children = (
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		6D3D466A2D8B834300F3E6E1 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				6D3D466B2D8B835900F3E6E1 /* NoteTaskModel.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		6D997A322D859D2F00C64705 = {
@@ -338,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D3D46692D8B455900F3E6E1 /* NotesSwiftUIView.swift in Sources */,
 				6D3D46552D885B4100F3E6E1 /* LoginSwiftUIView.swift in Sources */,
 				6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */,
 				6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */,
@@ -350,6 +365,7 @@
 				6D3D46612D8B121F00F3E6E1 /* NotesViewController.swift in Sources */,
 				6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */,
 				6D3D465F2D8B120500F3E6E1 /* TargetViewController.swift in Sources */,
+				6D3D466C2D8B835900F3E6E1 /* NoteTaskModel.swift in Sources */,
 				6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */,
 				6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,

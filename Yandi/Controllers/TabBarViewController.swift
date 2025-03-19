@@ -12,7 +12,6 @@ final class TabBarViewController: UITabBarController {
         override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .systemRed
         self.tabBar.backgroundImage = UIImage()
         self.tabBar.backgroundColor = .secondarySystemBackground
         setUpTabs()
@@ -37,19 +36,19 @@ final class TabBarViewController: UITabBarController {
         let nav4 = UINavigationController(rootViewController: friendsVC)
         let nav5 = UINavigationController(rootViewController: profileVC)
         
-        nav1.tabBarItem = UITabBarItem(title: "Target",
+        nav1.tabBarItem = UITabBarItem(title: "Цели",
                                        image: UIImage(systemName: "house"),
                                        tag: 1)
-        nav2.tabBarItem = UITabBarItem(title: "Notes",
+        nav2.tabBarItem = UITabBarItem(title: "Заметки",
                                        image: UIImage(systemName: "magnifyingglass"),
                                        tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "Diary",
+        nav3.tabBarItem = UITabBarItem(title: "Дневник",
                                        image: UIImage(systemName: "bookmark.fill"),
                                        tag: 3)
-        nav4.tabBarItem = UITabBarItem(title: "Friends",
+        nav4.tabBarItem = UITabBarItem(title: "Друзья",
                                        image: UIImage(systemName: "heart.fill"),
                                        tag: 4)
-        nav5.tabBarItem = UITabBarItem(title: "Profile",
+        nav5.tabBarItem = UITabBarItem(title: "Профиль",
                                        image: UIImage(systemName: "plus"),
                                        tag: 5)
         
