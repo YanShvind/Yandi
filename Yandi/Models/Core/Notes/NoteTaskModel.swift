@@ -5,4 +5,14 @@
 //  Created by Yan Shvyndikov on 20.03.2025.
 //
 
-import Foundation
+import SwiftUI
+
+struct Task: Identifiable {
+    var id: UUID = .init()
+    var taskTitle: String
+    var creationDate: Date = .init()
+    var isComplected: Bool = false
+    var tint: Color
+}
+
+
