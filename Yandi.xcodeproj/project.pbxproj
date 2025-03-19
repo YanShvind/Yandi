@@ -7,36 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D464C2D88593000F3E6E1 /* ColorHex.swift */; };
-		6D3D464F2D885A8200F3E6E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D464E2D885A8200F3E6E1 /* RegisterViewController.swift */; };
-		6D3D46512D885A9F00F3E6E1 /* RegisterSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46502D885A9F00F3E6E1 /* RegisterSwiftUIView.swift */; };
-		6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46522D885AFE00F3E6E1 /* LoginViewController.swift */; };
-		6D3D46552D885B4100F3E6E1 /* LoginSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46542D885B4100F3E6E1 /* LoginSwiftUIView.swift */; };
-		6D3D465F2D8B120500F3E6E1 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */; };
-		6D3D46612D8B121F00F3E6E1 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */; };
-		6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */; };
-		6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */; };
-		6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */; };
 		6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A3E2D859D2F00C64705 /* AppDelegate.swift */; };
 		6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A402D859D2F00C64705 /* SceneDelegate.swift */; };
 		6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A422D859D2F00C64705 /* TabBarViewController.swift */; };
 		6D997A482D859D3000C64705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D997A472D859D3000C64705 /* Assets.xcassets */; };
 		6D997A4B2D859D3000C64705 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6D997A4A2D859D3000C64705 /* Base */; };
 		6D997A642D88442200C64705 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A632D88442200C64705 /* WelcomeViewController.swift */; };
-		6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A652D88446A00C64705 /* WelcomeSwiftUIView.swift */; };
+		6D997A662D88446A00C64705 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A652D88446A00C64705 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D3D464C2D88593000F3E6E1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
-		6D3D464E2D885A8200F3E6E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		6D3D46502D885A9F00F3E6E1 /* RegisterSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSwiftUIView.swift; sourceTree = "<group>"; };
-		6D3D46522D885AFE00F3E6E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6D3D46542D885B4100F3E6E1 /* LoginSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSwiftUIView.swift; sourceTree = "<group>"; };
-		6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
-		6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6D997A3B2D859D2F00C64705 /* Yandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D997A3E2D859D2F00C64705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D997A402D859D2F00C64705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +25,7 @@
 		6D997A4A2D859D3000C64705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D997A4C2D859D3000C64705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D997A632D88442200C64705 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		6D997A652D88446A00C64705 /* WelcomeSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSwiftUIView.swift; sourceTree = "<group>"; };
+		6D997A652D88446A00C64705 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,61 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D3D464B2D88591300F3E6E1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D464C2D88593000F3E6E1 /* ColorHex.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6D3D46562D8B060200F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */,
-				6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */,
-				6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */,
-				6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */,
-				6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D46572D8B062000F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D46582D8B063B00F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D46592D8B064400F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D465A2D8B114600F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D465B2D8B115100F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		6D997A322D859D2F00C64705 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +65,7 @@
 				6D997A532D859F0A00C64705 /* Controllers */,
 				6D997A572D88414D00C64705 /* Services */,
 				6D997A592D8841F300C64705 /* Networking */,
-				6D3D464B2D88591300F3E6E1 /* Extensions */,
+				6D997A562D85A02700C64705 /* Utils */,
 				6D997A5A2D88424000C64705 /* Resources */,
 				6D997A4C2D859D3000C64705 /* Info.plist */,
 			);
@@ -152,6 +77,7 @@
 			children = (
 				6D997A3E2D859D2F00C64705 /* AppDelegate.swift */,
 				6D997A402D859D2F00C64705 /* SceneDelegate.swift */,
+				6D997A472D859D3000C64705 /* Assets.xcassets */,
 				6D997A492D859D3000C64705 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -162,7 +88,6 @@
 			children = (
 				6D997A422D859D2F00C64705 /* TabBarViewController.swift */,
 				6D997A5E2D88433200C64705 /* Authorization */,
-				6D3D46562D8B060200F3E6E1 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				6D997A5D2D88432400C64705 /* Authorization */,
-				6D3D46572D8B062000F3E6E1 /* Core */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,16 +104,21 @@
 			isa = PBXGroup;
 			children = (
 				6D997A5C2D88431800C64705 /* Authorization */,
-				6D3D46582D8B063B00F3E6E1 /* Core */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6D997A562D85A02700C64705 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6D997A572D88414D00C64705 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				6D997A5F2D88434600C64705 /* Authorization */,
-				6D3D465A2D8B114600F3E6E1 /* Core */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				6D997A5B2D8842FF00C64705 /* Authorization */,
-				6D3D46592D8B064400F3E6E1 /* Core */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				6D997A602D88435000C64705 /* Authorization */,
-				6D3D465B2D8B115100F3E6E1 /* Core */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -215,7 +142,6 @@
 		6D997A5A2D88424000C64705 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6D997A472D859D3000C64705 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,9 +163,7 @@
 		6D997A5D2D88432400C64705 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				6D997A652D88446A00C64705 /* WelcomeSwiftUIView.swift */,
-				6D3D46502D885A9F00F3E6E1 /* RegisterSwiftUIView.swift */,
-				6D3D46542D885B4100F3E6E1 /* LoginSwiftUIView.swift */,
+				6D997A652D88446A00C64705 /* WelcomeView.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -248,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				6D997A632D88442200C64705 /* WelcomeViewController.swift */,
-				6D3D464E2D885A8200F3E6E1 /* RegisterViewController.swift */,
-				6D3D46522D885AFE00F3E6E1 /* LoginViewController.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -338,19 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D3D46552D885B4100F3E6E1 /* LoginSwiftUIView.swift in Sources */,
-				6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */,
-				6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */,
-				6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */,
-				6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */,
-				6D3D464F2D885A8200F3E6E1 /* RegisterViewController.swift in Sources */,
+				6D997A662D88446A00C64705 /* WelcomeView.swift in Sources */,
 				6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */,
 				6D997A642D88442200C64705 /* WelcomeViewController.swift in Sources */,
-				6D3D46512D885A9F00F3E6E1 /* RegisterSwiftUIView.swift in Sources */,
-				6D3D46612D8B121F00F3E6E1 /* NotesViewController.swift in Sources */,
-				6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */,
-				6D3D465F2D8B120500F3E6E1 /* TargetViewController.swift in Sources */,
-				6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */,
 				6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
 			);
