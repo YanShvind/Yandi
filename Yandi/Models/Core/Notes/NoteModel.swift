@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Task: Identifiable {
+struct NoteTask: Identifiable {
     var id: UUID = .init()
     var taskTitle: String
     var creationDate: Date = .init()
