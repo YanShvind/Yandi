@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  RegisterViewController.swift
 //  Yandi
 //
 //  Created by Yan Shvyndikov on 17.03.2025.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class WelcomeViewController: UIViewController {
+final class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +17,12 @@ final class WelcomeViewController: UIViewController {
     }
     
     private func setupSwiftUIView() {
-        let welcomeView = WelcomeSwiftUIView(
-            onLoginTap: { [weak self] in self?.goToLogin() },
-            onRegisterTap: { [weak self] in self?.goToRegister() }
+        let registerView = RegisterSwiftUIView(
+            signUpTapped: { [weak self] in self?.signUp() },
+            goToLogginTapped: { [weak self] in self?.goToLogin() }
         )
 
-        let hostingController = UIHostingController(rootView: welcomeView)
+        let hostingController = UIHostingController(rootView: registerView)
         addChild(hostingController)
         view.addSubview(hostingController.view)
 
@@ -37,15 +37,14 @@ final class WelcomeViewController: UIViewController {
     }
     
     
+    private func signUp() {
+        print("Переход на гланый экран")
+        // navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
+
     private func goToLogin() {
         let loginViewController = LoginViewController()
         loginViewController.modalPresentationStyle = .fullScreen
         present(loginViewController, animated: true, completion: nil)
-    }
-
-    private func goToRegister() {
-        let registerViewController = RegisterViewController()
-        registerViewController.modalPresentationStyle = .fullScreen
-        present(registerViewController, animated: true, completion: nil)
     }
 }
