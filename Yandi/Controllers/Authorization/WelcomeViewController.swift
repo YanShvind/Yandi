@@ -17,7 +17,7 @@ final class WelcomeViewController: UIViewController {
     }
     
     private func setupSwiftUIView() {
-        let welcomeView = WelcomeSwiftUIView(
+        let welcomeView = WelcomeView(
             onLoginTap: { [weak self] in self?.goToLogin() },
             onRegisterTap: { [weak self] in self?.goToRegister() }
         )
@@ -34,18 +34,19 @@ final class WelcomeViewController: UIViewController {
             hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         hostingController.didMove(toParent: self)
+        
+        print("Переход на экран входа")
+
     }
     
     
     private func goToLogin() {
-        let loginViewController = LoginViewController()
-        loginViewController.modalPresentationStyle = .fullScreen
-        present(loginViewController, animated: true, completion: nil)
+        print("Переход на экран входа")
+        // navigationController?.pushViewController(LoginViewController(), animated: true)
     }
 
     private func goToRegister() {
-        let registerViewController = RegisterViewController()
-        registerViewController.modalPresentationStyle = .fullScreen
-        present(registerViewController, animated: true, completion: nil)
+        print("Переход на экран регистрации")
+        // navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 }
