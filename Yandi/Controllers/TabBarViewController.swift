@@ -52,9 +52,9 @@ final class TabBarViewController: UITabBarController {
                                        image: UIImage(systemName: "plus"),
                                        tag: 5)
         
-        for nav in [nav1, nav2, nav3, nav4, nav5] {
-            nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
-        }
+//        for nav in [nav1, nav2, nav3, nav4, nav5] {
+//            nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+//        }
         
         setViewControllers([nav1, nav2, nav3, nav4, nav5], animated: true)
     }
