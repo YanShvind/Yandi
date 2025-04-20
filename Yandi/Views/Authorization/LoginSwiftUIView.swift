@@ -120,6 +120,7 @@ struct LoginSwiftUIView: View {
         }
     }
 }
+
 #Preview {
     LoginSwiftUIView(onLoginTap: {}, haveAccountTap: {})
 }

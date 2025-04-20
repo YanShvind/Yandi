@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class ProfileViewController: UIViewController {
 
@@ -13,17 +14,23 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .systemMint
+        setupSwiftUIView()
     }
     
+    private func setupSwiftUIView() {
+        let profileView = ProfileSwiftUIView()
 
-    /*
-    // MARK: - Navigation
+        let hostingController = UIHostingController(rootView: profileView)
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        hostingController.didMove(toParent: self)
     }
-    */
-
 }
