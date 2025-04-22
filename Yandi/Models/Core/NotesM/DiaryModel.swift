@@ -7,16 +7,12 @@
 
 import Foundation
 
-struct DiaryEntry: Identifiable, Hashable {
+struct NoteEntry: Identifiable, Hashable {
     let id: UUID
     var title: String
     var text: String
     var date: Date
 }
 
-struct DiaryCategory: Identifiable, Hashable {
-    let id: UUID
-    var name: String
-    var entries: [DiaryEntry]
-}
+
 
