@@ -36,7 +36,6 @@ final class WelcomeViewController: UIViewController {
         hostingController.didMove(toParent: self)
     }
     
-    
     private func goToLogin() {
         let loginViewController = LoginViewController()
         loginViewController.modalPresentationStyle = .fullScreen

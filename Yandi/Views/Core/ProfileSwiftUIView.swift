@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct ActivityEvent: Identifiable {
+    let id = UUID()
+    let icon: String
+    let title: String
+    let description: String
+    let typeColor: Color
+    let timestamp: Date
+}
+
+
+let activityEvents: [ActivityEvent] = [
+    ActivityEvent(icon: "square.and.pencil", title: "Новая заметка", description: "Планы на неделю", typeColor: .green, timestamp: Date().addingTimeInterval(-3600)),
+    ActivityEvent(icon: "book.closed", title: "Запись в дневник", description: "Сегодня был странный день...", typeColor: .blue, timestamp: Date().addingTimeInterval(-7200)),
+    ActivityEvent(icon: "trash", title: "Удалена заметка", description: "Черновик", typeColor: .red, timestamp: Date().addingTimeInterval(-10800))
+]
+
+
 struct ProfileSwiftUIView: View {
     var body: some View {
         ScrollView {
@@ -31,16 +48,16 @@ struct ProfileSwiftUIView: View {
                     }
                 }
                 
-                Text("Ross Ankunding")
+                Text("Ян Юрьевич")
                     .font(.title)
                     .bold()
                 
-                Text("Bridie40@yahoo.com")
+                Text("ffffff@gmail.com")
                     .foregroundColor(.gray)
                     .font(.subheadline)
                 
                 Button(action: {}) {
-                    Text("Edit Profile")
+                    Text("Редактировать профиль")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
@@ -50,40 +67,44 @@ struct ProfileSwiftUIView: View {
                 }
                 .padding(.horizontal)
                 
-                // Tabs
                 HStack {
-                    VStack {
-                        Text("Created")
-                            .bold()
-                        Capsule()
-                            .frame(height: 3)
-                            .foregroundColor(.black)
-                    }
+                    Text("История изменений")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.primary)
                     Spacer()
-                    VStack {
-                        Text("Saved")
-                            .foregroundColor(.gray)
-                        Capsule()
-                            .frame(height: 3)
-                            .foregroundColor(.clear)
-                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 16)
                 
-                // Grid of images
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    ForEach(1..<5) { index in
-                        Image("shoe\(index)")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 160)
-                            .cornerRadius(20)
-                            .clipped()
-                            .background(Color(.gray))
+                ForEach(activityEvents) { event in
+                    HStack(alignment: .top, spacing: 12) {
+                        ZStack {
+                            Circle()
+                                .fill(event.typeColor.opacity(0.2))
+                                .frame(width: 40, height: 40)
+                            Image(systemName: event.icon)
+                                .foregroundColor(event.typeColor)
+                        }
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(event.title)
+                                .font(.headline)
+                            Text(event.description)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            Text(event.timestamp, style: .relative)
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
                     }
+                    .padding(.vertical, 8)
+                    .padding(.horizontal)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(12)
                 }
-                .padding()
+
             }
         }
         .edgesIgnoringSafeArea(.top)
