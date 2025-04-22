@@ -25,6 +25,8 @@
 		6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */; };
 		6D8D4B862DB513680082CBFB /* NewDiaryEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B852DB513680082CBFB /* NewDiaryEntryView.swift */; };
 		6D8D4B882DB513AA0082CBFB /* DiaryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */; };
+		6D8D4B8B2DB6AAE60082CBFB /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8A2DB6AAE60082CBFB /* DiaryModel.swift */; };
+		6D8D4B8D2DB6AB000082CBFB /* DiaryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8C2DB6AB000082CBFB /* DiaryStore.swift */; };
 		6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A3E2D859D2F00C64705 /* AppDelegate.swift */; };
 		6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A402D859D2F00C64705 /* SceneDelegate.swift */; };
 		6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A422D859D2F00C64705 /* TabBarViewController.swift */; };
@@ -55,6 +57,8 @@
 		6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSwiftUIView.swift; sourceTree = "<group>"; };
 		6D8D4B852DB513680082CBFB /* NewDiaryEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryEntryView.swift; sourceTree = "<group>"; };
 		6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditorView.swift; sourceTree = "<group>"; };
+		6D8D4B8A2DB6AAE60082CBFB /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		6D8D4B8C2DB6AB000082CBFB /* DiaryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryStore.swift; sourceTree = "<group>"; };
 		6D997A3B2D859D2F00C64705 /* Yandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D997A3E2D859D2F00C64705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D997A402D859D2F00C64705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		6D3D46592D8B064400F3E6E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D4B892DB6AACA0082CBFB /* Diary */,
 				6D3D466A2D8B834300F3E6E1 /* Notes */,
 			);
 			path = Core;
@@ -157,6 +162,15 @@
 				6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */,
 			);
 			path = DiaryViews;
+			sourceTree = "<group>";
+		};
+		6D8D4B892DB6AACA0082CBFB /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D4B8A2DB6AAE60082CBFB /* DiaryModel.swift */,
+				6D8D4B8C2DB6AB000082CBFB /* DiaryStore.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 		6D997A322D859D2F00C64705 = {
@@ -401,6 +415,7 @@
 				6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */,
 				6D8D4B882DB513AA0082CBFB /* DiaryEditorView.swift in Sources */,
 				6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */,
+				6D8D4B8B2DB6AAE60082CBFB /* DiaryModel.swift in Sources */,
 				6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */,
 				6D3D464F2D885A8200F3E6E1 /* RegisterViewController.swift in Sources */,
 				6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */,
@@ -417,6 +432,7 @@
 				6D1443C72DA79C1A00BF0E0F /* ProfileSwiftUIView.swift in Sources */,
 				6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
+				6D8D4B8D2DB6AB000082CBFB /* DiaryStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,42 +7,38 @@
 
 import SwiftUI
 
-struct DiaryEntry: Identifiable, Hashable {
-    let id: UUID
-    var title: String
-    var text: String
-    var date: Date
-}
-
-
 struct DiarySwiftUIView: View {
-    @State private var entries: [DiaryEntry] = []
+    @ObservedObject var store: DiaryStore
     @State private var isPresentingNewEntry = false
+    var onEntryTapped: (DiaryEntry) -> Void // замыкание, вызывается при тапе на ячейку
     
     var body: some View {
-        List {
-            ForEach(entries) { entry in
-                NavigationLink(destination: DiaryEditorView(entry: entry) { updated in
-                    if let index = entries.firstIndex(where: { $0.id == updated.id }) {
-                        entries[index] = updated
-                    }
-                }) {
-                    VStack(alignment: .leading) {
-                        Text(entry.title)
-                            .font(.headline)
-                        Text(entry.date.formatted(date: .abbreviated, time: .shortened))
-                            .font(.caption)
-                            .foregroundColor(.gray)
+        NavigationView {
+            List {
+                ForEach(store.entries) { entry in
+                    Button {
+                        onEntryTapped(entry)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            Text(entry.title)
+                                .font(.headline)
+                            Text(entry.date.formatted(date: .abbreviated, time: .shortened))
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
+                .onDelete { indexSet in
+                    store.entries.remove(atOffsets: indexSet)
+                }
             }
-            .onDelete { indexSet in
-                entries.remove(atOffsets: indexSet)
+            .sheet(isPresented: $isPresentingNewEntry) {
+                NewDiaryEntryView { newEntry in
+                    store.entries.append(newEntry)
+                    isPresentingNewEntry = false
+                }
             }
         }
     }
 }
 
-#Preview {
-    DiarySwiftUIView()
-}
