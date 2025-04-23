@@ -7,10 +7,17 @@
 
 import SwiftUI
 
-struct NewDiaryEntryView: View {
-        
-    var body: some View {
-       Text("DD")
-    }
-}
+//struct NewDiaryEntryView: View {
+//    var entry: DiaryEntry
+//
+//    var body: some View {
+//        VStack(alignment: .leading, spacing: 16) {
+//            Text(entry.title).font(.title).bold()
+//            Text(entry.content).font(.body)
+//            Spacer()
+//        }
+//        .padding()
+//        .navigationTitle("Запись")
+//    }
+//}
 
