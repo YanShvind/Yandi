@@ -37,8 +37,9 @@ final class LoginViewController: UIViewController {
     }
     
     private func goToLogin() {
-        print("Переход на главный экран")
-        // navigationController?.pushViewController(LoginViewController(), animated: true)
+        let vc = TabBarViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 
     private func goToRegister() {

@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class DiaryStore: ObservableObject {
-    @Published var entries: [DiaryEntry] = []
+final class NoteStore: ObservableObject {
+    @Published var entries: [NoteEntry] = []
 }

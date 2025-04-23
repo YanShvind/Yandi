@@ -6,24 +6,70 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class NotesViewController: UIViewController {
+    private let store = NoteStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .systemBlue
+        self.title = "Заметки"
+        self.view.backgroundColor = .systemBackground
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addButtonTapped)
+        )
+
+        setupSwiftUIView()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func setupSwiftUIView() {
+        let diaryView = NotesSwiftUIView(store: store) { [weak self] tappedEntry in
+            self?.showEditor(for: tappedEntry) // при тапе на ячейку вызываем метод VC
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let hostingController = UIHostingController(rootView: diaryView)
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        hostingController.didMove(toParent: self)
     }
-    */
 
+    /// Показывает SwiftUI-экран редактирования записи
+    private func showEditor(for entry: NoteEntry) {
+        let editorView = NoteEditorView(entry: entry) { [weak self] updated in
+            // обновляем запись по id
+            if let index = self?.store.entries.firstIndex(where: { $0.id == updated.id }) {
+                self?.store.entries[index] = updated
+            }
+            self?.dismiss(animated: true)
+        }
+
+        let hostingController = UIHostingController(rootView: editorView)
+        let navController = UINavigationController(rootViewController: hostingController)
+        self.present(navController, animated: true)
+    }
+
+    /// Добавление записи
+    @objc
+    private func addButtonTapped() {
+        let newEntryView = NewNoteView { [weak self] newEntry in
+            self?.store.entries.append(newEntry)
+            self?.dismiss(animated: true)
+        }
+
+        let hostingController = UIHostingController(rootView: newEntryView)
+        let navController = UINavigationController(rootViewController: hostingController)
+        self.present(navController, animated: true)
+    }
 }
