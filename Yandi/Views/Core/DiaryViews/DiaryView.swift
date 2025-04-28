@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct DiarySwiftUIView: View {
-    
     @ObservedObject var viewModel: DiaryViewModel
+    var onEntryTap: (DiaryEntry) -> Void  
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                ForEach(groupedEntries.keys.sorted(by: >), id: \.self) { month in
+                ForEach(groupedEntries.keys.sorted(by: <), id: \.self) { month in
                     Section(header: Text(month)
                         .font(.title2)
                         .bold()
@@ -22,8 +22,13 @@ struct DiarySwiftUIView: View {
                         .padding(.top, 8)
                     ) {
                         ForEach(groupedEntries[month] ?? []) { entry in
-                            DiaryCardView(entry: entry)
-                                .padding(.horizontal)
+                            Button {
+                                onEntryTap(entry)  // вызываем замыкание при тапе
+                            } label: {
+                                DiaryCardView(entry: entry)
+                                    .padding(.horizontal)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
@@ -31,7 +36,6 @@ struct DiarySwiftUIView: View {
         }
     }
 
-    // Группируем по "Месяц Год"
     var groupedEntries: [String: [DiaryEntry]] {
         Dictionary(grouping: viewModel.entries) { entry in
             let formatter = DateFormatter()
@@ -42,34 +46,3 @@ struct DiarySwiftUIView: View {
     }
 }
 
-struct DiaryCardView: View {
-    var entry: DiaryEntry
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(entry.title)
-                .font(.headline)
-                .foregroundColor(.primary)
-            Text(entry.content)
-                .font(.body)
-                .foregroundColor(.secondary)
-            HStack {
-                Spacer()
-                Text(formattedDate)
-                    .font(.caption)
-                    .foregroundColor(.gray)
-            }
-        }
-        .padding()
-        .background(.ultraThinMaterial)
-        .cornerRadius(16)
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
-    }
-
-    var formattedDate: String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ru_RU")
-        formatter.dateFormat = "EEEE, d MMMM"
-        return formatter.string(from: entry.date).capitalized
-    }
-}
