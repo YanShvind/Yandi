@@ -16,13 +16,11 @@ struct ActivityEvent: Identifiable {
     let timestamp: Date
 }
 
-
 let activityEvents: [ActivityEvent] = [
     ActivityEvent(icon: "square.and.pencil", title: "Новая заметка", description: "Планы на неделю", typeColor: .green, timestamp: Date().addingTimeInterval(-3600)),
     ActivityEvent(icon: "book.closed", title: "Запись в дневник", description: "Сегодня был странный день...", typeColor: .blue, timestamp: Date().addingTimeInterval(-7200)),
     ActivityEvent(icon: "trash", title: "Удалена заметка", description: "Черновик", typeColor: .red, timestamp: Date().addingTimeInterval(-10800))
 ]
-
 
 struct ProfileSwiftUIView: View {
     var body: some View {

@@ -23,14 +23,15 @@
 		6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */; };
 		6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B802DB439210082CBFB /* DiaryView.swift */; };
 		6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */; };
-		6D8D4B862DB513680082CBFB /* NewDiaryEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B852DB513680082CBFB /* NewDiaryEntryView.swift */; };
-		6D8D4B882DB513AA0082CBFB /* DiaryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */; };
+		6D8D4B862DB513680082CBFB /* DiaryAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B852DB513680082CBFB /* DiaryAddView.swift */; };
+		6D8D4B882DB513AA0082CBFB /* DiaryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B872DB513AA0082CBFB /* DiaryEditView.swift */; };
 		6D8D4B8B2DB6AAE60082CBFB /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8A2DB6AAE60082CBFB /* DiaryModel.swift */; };
 		6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8C2DB6AB000082CBFB /* NoteStore.swift */; };
 		6D8D4BB02DB7BE2D0082CBFB /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BAF2DB7BE2D0082CBFB /* NewNoteView.swift */; };
 		6D8D4BB22DB7BE5F0082CBFB /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB12DB7BE5F0082CBFB /* NoteEditorView.swift */; };
 		6D8D4BB52DB90F660082CBFB /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB42DB90F660082CBFB /* DiaryEntry.swift */; };
 		6D8D4BB82DB90FAC0082CBFB /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB72DB90FAC0082CBFB /* DiaryViewModel.swift */; };
+		6D8D4BBA2DB9A6FA0082CBFB /* DiaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB92DB9A6FA0082CBFB /* DiaryCardView.swift */; };
 		6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A3E2D859D2F00C64705 /* AppDelegate.swift */; };
 		6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A402D859D2F00C64705 /* SceneDelegate.swift */; };
 		6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A422D859D2F00C64705 /* TabBarViewController.swift */; };
@@ -59,14 +60,15 @@
 		6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSwiftUIView.swift; sourceTree = "<group>"; };
 		6D8D4B802DB439210082CBFB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSwiftUIView.swift; sourceTree = "<group>"; };
-		6D8D4B852DB513680082CBFB /* NewDiaryEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryEntryView.swift; sourceTree = "<group>"; };
-		6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditorView.swift; sourceTree = "<group>"; };
+		6D8D4B852DB513680082CBFB /* DiaryAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddView.swift; sourceTree = "<group>"; };
+		6D8D4B872DB513AA0082CBFB /* DiaryEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditView.swift; sourceTree = "<group>"; };
 		6D8D4B8A2DB6AAE60082CBFB /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
 		6D8D4B8C2DB6AB000082CBFB /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		6D8D4BAF2DB7BE2D0082CBFB /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		6D8D4BB12DB7BE5F0082CBFB /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
 		6D8D4BB42DB90F660082CBFB /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryEntry.swift; path = Yandi/Models/Core/NotesM/DiaryEntry.swift; sourceTree = SOURCE_ROOT; };
 		6D8D4BB72DB90FAC0082CBFB /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		6D8D4BB92DB9A6FA0082CBFB /* DiaryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCardView.swift; sourceTree = "<group>"; };
 		6D997A3B2D859D2F00C64705 /* Yandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D997A3E2D859D2F00C64705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D997A402D859D2F00C64705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,8 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				6D8D4B802DB439210082CBFB /* DiaryView.swift */,
-				6D8D4B852DB513680082CBFB /* NewDiaryEntryView.swift */,
-				6D8D4B872DB513AA0082CBFB /* DiaryEditorView.swift */,
+				6D8D4BB92DB9A6FA0082CBFB /* DiaryCardView.swift */,
+				6D8D4B852DB513680082CBFB /* DiaryAddView.swift */,
+				6D8D4B872DB513AA0082CBFB /* DiaryEditView.swift */,
 			);
 			path = DiaryViews;
 			sourceTree = "<group>";
@@ -444,13 +447,13 @@
 			files = (
 				6D3D46692D8B455900F3E6E1 /* NotesSwiftUIView.swift in Sources */,
 				6D3D46552D885B4100F3E6E1 /* LoginSwiftUIView.swift in Sources */,
-				6D8D4B862DB513680082CBFB /* NewDiaryEntryView.swift in Sources */,
+				6D8D4B862DB513680082CBFB /* DiaryAddView.swift in Sources */,
 				6D8D4BB02DB7BE2D0082CBFB /* NewNoteView.swift in Sources */,
 				6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */,
 				6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */,
 				6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */,
 				6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */,
-				6D8D4B882DB513AA0082CBFB /* DiaryEditorView.swift in Sources */,
+				6D8D4B882DB513AA0082CBFB /* DiaryEditView.swift in Sources */,
 				6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */,
 				6D8D4B8B2DB6AAE60082CBFB /* DiaryModel.swift in Sources */,
 				6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */,
@@ -470,6 +473,7 @@
 				6DB72F9C2D9084B700A0A553 /* View+Extension.swift in Sources */,
 				6DB72F9E2D9084C600A0A553 /* Date+Extension.swift in Sources */,
 				6D1443C72DA79C1A00BF0E0F /* ProfileSwiftUIView.swift in Sources */,
+				6D8D4BBA2DB9A6FA0082CBFB /* DiaryCardView.swift in Sources */,
 				6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
 				6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */,
