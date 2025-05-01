@@ -8,5 +8,5 @@
 import Foundation
 
 final class NoteStore: ObservableObject {
-    @Published var entries: [NoteEntry] = []
+    @Published var entries: [NoteModel] = []
 }

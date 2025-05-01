@@ -10,10 +10,10 @@ import SwiftUI
 struct NoteEditorView: View {
     @Environment(\.dismiss) var dismiss
     
-    @State private var entry: NoteEntry
-    var onSave: (NoteEntry) -> Void
+    @State private var entry: NoteModel
+    var onSave: (NoteModel) -> Void
     
-    init(entry: NoteEntry, onSave: @escaping (NoteEntry) -> Void) {
+    init(entry: NoteModel, onSave: @escaping (NoteModel) -> Void) {
         _entry = State(initialValue: entry)
         self.onSave = onSave
     }

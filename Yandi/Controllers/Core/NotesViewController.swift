@@ -15,21 +15,19 @@ final class NotesViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Заметки"
-        self.view.backgroundColor = .systemBackground
+       // self.view.backgroundColor = .secondarySystemBackground
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .add,
-            target: self,
-            action: #selector(addButtonTapped)
-        )
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(
+//            barButtonSystemItem: .add,
+//            target: self,
+//            action: #selector(addButtonTapped)
+//        )
 
         setupSwiftUIView()
     }
 
     private func setupSwiftUIView() {
-        let diaryView = NotesSwiftUIView(store: store) { [weak self] tappedEntry in
-            self?.showEditor(for: tappedEntry) // при тапе на ячейку вызываем метод VC
-        }
+        let diaryView = NotesSwiftUIView()
 
         let hostingController = UIHostingController(rootView: diaryView)
         addChild(hostingController)
@@ -44,32 +42,32 @@ final class NotesViewController: UIViewController {
         ])
         hostingController.didMove(toParent: self)
     }
-
-    /// Показывает SwiftUI-экран редактирования записи
-    private func showEditor(for entry: NoteEntry) {
-        let editorView = NoteEditorView(entry: entry) { [weak self] updated in
-            // обновляем запись по id
-            if let index = self?.store.entries.firstIndex(where: { $0.id == updated.id }) {
-                self?.store.entries[index] = updated
-            }
-            self?.dismiss(animated: true)
-        }
-
-        let hostingController = UIHostingController(rootView: editorView)
-        let navController = UINavigationController(rootViewController: hostingController)
-        self.present(navController, animated: true)
-    }
-
-    /// Добавление записи
-    @objc
-    private func addButtonTapped() {
-        let newEntryView = NewNoteView { [weak self] newEntry in
-            self?.store.entries.append(newEntry)
-            self?.dismiss(animated: true)
-        }
-
-        let hostingController = UIHostingController(rootView: newEntryView)
-        let navController = UINavigationController(rootViewController: hostingController)
-        self.present(navController, animated: true)
-    }
+//
+//    /// Показывает SwiftUI-экран редактирования записи
+//    private func showEditor(for entry: NoteModel) {
+//        let editorView = NoteEditorView(entry: entry) { [weak self] updated in
+//            // обновляем запись по id
+//            if let index = self?.store.entries.firstIndex(where: { $0.id == updated.id }) {
+//                self?.store.entries[index] = updated
+//            }
+//            self?.dismiss(animated: true)
+//        }
+//
+//        let hostingController = UIHostingController(rootView: editorView)
+//        let navController = UINavigationController(rootViewController: hostingController)
+//        self.present(navController, animated: true)
+//    }
+//
+//    /// Добавление записи
+//    @objc
+//    private func addButtonTapped() {
+//        let newEntryView = NewNoteView { [weak self] newEntry in
+//            self?.store.entries.append(newEntry)
+//            self?.dismiss(animated: true)
+//        }
+//
+//        let hostingController = UIHostingController(rootView: newEntryView)
+//        let navController = UINavigationController(rootViewController: hostingController)
+//        self.present(navController, animated: true)
+//    }
 }

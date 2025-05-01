@@ -12,7 +12,7 @@ struct NewNoteView: View {
     @State private var title = ""
     @State private var text = ""
     
-    var onSave: (NoteEntry) -> Void
+    var onSave: (NoteModel) -> Void
     
     var body: some View {
         Form {
@@ -29,7 +29,7 @@ struct NewNoteView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Сохранить") {
-                    let newEntry = NoteEntry(
+                    let newEntry = NoteModel(
                         id: UUID(),
                         title: title,
                         text: text,
