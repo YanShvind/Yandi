@@ -15,7 +15,7 @@ struct DiaryEditView: View {
 
     var entry: DiaryEntry
     var onSave: (DiaryEntry) -> Void
-    var onDelete: (() -> Void)? = nil // ⚠️ опциональное замыкание для удаления
+    var onDelete: (() -> Void)? = nil 
 
     init(entry: DiaryEntry,
          onSave: @escaping (DiaryEntry) -> Void,
