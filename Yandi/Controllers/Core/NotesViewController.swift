@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 final class NotesViewController: UIViewController {
-    private let store = NoteStore()
+ //   private let store = NoteStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()

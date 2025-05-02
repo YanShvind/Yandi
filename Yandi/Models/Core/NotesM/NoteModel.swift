@@ -9,12 +9,12 @@ import Foundation
 import SwiftUICore
 import UIKit
 
-struct NoteModel: Identifiable, Hashable {
-    let id: UUID
-    var title: String
-    var text: String
-    var date: Date
-}
+//struct NoteModel: Identifiable, Hashable {
+//    let id: UUID
+//    var title: String
+//    var text: String
+//    var date: Date
+//}
 
 struct Task: Identifiable {
     var id: UUID = .init()
