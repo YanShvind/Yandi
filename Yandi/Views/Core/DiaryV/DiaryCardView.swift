@@ -11,32 +11,33 @@ struct DiaryCardView: View {
     var entry: DiaryEntry
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // Заголовок записи
+        VStack(alignment: .leading, spacing: 12) {
             Text(entry.title)
-                .font(.headline)
+                .font(Theme.cardTitleFont)
                 .foregroundColor(.primary)
 
-            // Краткое описание: если длинное — обрезаем
             Text(shortContent)
-                .font(.body)
+                .font(Theme.cardContentFont)
                 .foregroundColor(.secondary)
 
-            // Дата внизу справа
             HStack {
                 Spacer()
                 Text(formattedDate)
-                    .font(.caption)
+                    .font(Theme.cardDateFont)
                     .foregroundColor(.gray)
             }
         }
         .padding()
+        .background(Theme.cardBackground.opacity(0.7))
         .background(.ultraThinMaterial)
-        .cornerRadius(16)
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+        .cornerRadius(20)
+        .shadow(color: Theme.cardShadow, radius: 14, x: 0, y: 10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.white.opacity(0.1), lineWidth: 1)
+        )
     }
 
-    /// Форматированная дата вида "Понедельник, 31 марта"
     var formattedDate: String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ru_RU")
@@ -44,7 +45,6 @@ struct DiaryCardView: View {
         return formatter.string(from: entry.date).capitalized
     }
 
-    /// Обрезаем описание до 50 символов, добавляем "..." если длинное
     var shortContent: String {
         if entry.content.count > 100 {
             let index = entry.content.index(entry.content.startIndex, offsetBy: 100)

@@ -9,12 +9,12 @@ import UIKit
 import SwiftUI
 
 final class NotesViewController: UIViewController {
-    private let store = NoteStore()
+ //   private let store = NoteStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Заметки"
+        navigationController?.setNavigationBarHidden(true, animated: false)
        // self.view.backgroundColor = .secondarySystemBackground
 
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(

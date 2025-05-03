@@ -8,18 +8,57 @@
 import SwiftUI
 
 struct NotesSwiftUIView: View {
+    @State private var tasks: [Task] = sampleTasks.sorted { $1.creationDate > $0.creationDate }
+    
     @State private var currentDate: Date = Date()
     @State private var weekSlider: [[Date.WeekDay]] = []
     @State private var currentWeekIndex: Int = 1
     @State private var createWeek: Bool = false
+    @State private var createNewTask: Bool = false
     
     @Namespace private var animation
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HeaderView()
+        ZStack {
+            Theme.backgroundGradient.ignoresSafeArea()
+
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .leading) {
+                    HeaderView()
+                    
+                    Divider()
+                        .frame(height: 0.5)
+                        .overlay(Color.gray.opacity(0.3))
+                        .padding(.horizontal, 16)
+                    
+                    TasksView()
+                }
+               // .padding(.top, 16)
+                .padding(.bottom, 100)
+            }
+            
+            // Floating Button
+            .overlay(alignment: .bottom, content: {
+                Button {
+                    createNewTask.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .frame(width: 55, height: 55)
+                        .background(Color.blue.shadow(.drop(color: .black.opacity(0.1), radius: 5)), in: .circle)
+                }
+                .padding(15)
+            })
         }
-        .vSpacing(.top)
+        .sheet(isPresented: $createNewTask) {
+            NewNoteView()
+                .presentationDetents([.height(300)])
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(30)
+                .presentationBackground(.ultraThinMaterial)
+        }
+        
         .onAppear(perform: {
             if weekSlider.isEmpty {
                 let currentWeek = Date().fetchWeek()
@@ -70,17 +109,39 @@ struct NotesSwiftUIView: View {
         }
         .hSpacing(.leading)
         .overlay(alignment: .topTrailing, content: {
-            Button(action: {}) {
-                Image(systemName: "testcircle")
-                    .resizable()
-                    .background(.yellow)
-                    .aspectRatio(contentMode: .fill)
+            Button(action: {
+                withAnimation {
+                    currentWeekIndex = 1
+                    currentDate = Date()
+                    
+                    // Пересоздаем недели вокруг текущей даты
+                    let currentWeek = Date().fetchWeek()
+                    weekSlider.removeAll()
+                    
+                    if let firstDate = currentWeek.first?.date {
+                        weekSlider.append(firstDate.createPreviousWeek())
+                    }
+                    
+                    weekSlider.append(currentWeek)
+                    
+                    if let lastDate = currentWeek.last?.date {
+                        weekSlider.append(lastDate.createNextWeek())
+                    }
+                }
+            }) {
+                Circle()
+                    .fill(Color.white)
                     .frame(width: 45, height: 45)
-                    .clipShape(.circle)
+                    .overlay(
+                        Image(systemName: "arrow.clockwise")
+                            .foregroundColor(.black)
+                    )
             }
         })
         .padding(15)
-        .background(Color(.secondarySystemBackground))
+      //  .background(.ultraThinMaterial)
+      //  .cornerRadius(16)
+     //   .shadow(radius: 5)
         .onChange(of: currentWeekIndex, initial: false) { oldValue, newValue in
             if newValue == 0 || newValue == (weekSlider.count - 1) {
                 createWeek = true
@@ -147,6 +208,53 @@ struct NotesSwiftUIView: View {
             }
         }
     }
+        
+    /// Tasks View
+    @ViewBuilder
+    func TasksView() -> some View {
+        VStack(alignment: .leading, spacing: 24) {
+            
+            // АКТИВНЫЕ ЗАМЕТКИ
+            let activeTasks = tasks.filter { !$0.isCompleted }
+            if !activeTasks.isEmpty {
+                Text("АКТИВНЫЕ ЗАМЕТКИ")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.gray)
+                    .padding(.horizontal, 15)
+
+                VStack(spacing: 15) {
+                    ForEach(activeTasks) { task in
+                        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+                            NoteTaskRowView(task: $tasks[index])
+                        }
+                    }
+                }
+                .padding(.horizontal, 15)
+            }
+
+            // ВЫПОЛНЕННЫЕ ЗАМЕТКИ
+            let completedTasks = tasks.filter { $0.isCompleted }
+            if !completedTasks.isEmpty {
+                Text("ВЫПОЛНЕННЫЕ ЗАМЕТКИ")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.gray)
+                    .padding(.top, 10)
+                    .padding(.horizontal, 15)
+
+                VStack(spacing: 15) {
+                    ForEach(completedTasks) { task in
+                        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+                            NoteTaskRowView(task: $tasks[index])
+                        }
+                    }
+                }
+                .padding(.horizontal, 15)
+            }
+        }
+        .padding(.top, 15)
+    }
     
     func paginateWeek() {
         if weekSlider.indices.contains(currentWeekIndex) {
@@ -167,3 +275,6 @@ struct NotesSwiftUIView: View {
     }
 }
 
+#Preview {
+    NotesSwiftUIView()
+}

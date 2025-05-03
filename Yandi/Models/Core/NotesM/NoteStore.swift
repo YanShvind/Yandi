@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
-final class NoteStore: ObservableObject {
-    @Published var entries: [NoteModel] = []
-}
+//
+//final class NoteStore: ObservableObject {
+//    @Published var entries: [NoteModel] = []
+//}

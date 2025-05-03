@@ -15,7 +15,7 @@ struct DiaryEditView: View {
 
     var entry: DiaryEntry
     var onSave: (DiaryEntry) -> Void
-    var onDelete: (() -> Void)? = nil 
+    var onDelete: (() -> Void)? = nil
 
     init(entry: DiaryEntry,
          onSave: @escaping (DiaryEntry) -> Void,
@@ -28,38 +28,68 @@ struct DiaryEditView: View {
     }
 
     var body: some View {
-        Form {
-            Section(header: Text("Заголовок")) {
-                TextField("Заголовок", text: $title)
-            }
+        ZStack {
+            Theme.backgroundGradient.ignoresSafeArea()
 
-            Section(header: Text("Текст")) {
-                TextEditor(text: $content)
-                    .frame(minHeight: 500)
-            }
+            ScrollView {
+                VStack(spacing: 24) {
+                    // Поле заголовка
+                    TextField("Заголовок", text: $title)
+                        .padding()
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(12)
+                        .shadow(radius: 5)
 
-            if onDelete != nil {
-                Section {
-                    Button(role: .destructive) {
-                        onDelete?()
+                    // Поле содержимого
+                    TextEditor(text: $content)
+                        .frame(minHeight: 300)
+                        .padding()
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(12)
+                        .shadow(radius: 5)
+                        .scrollContentBackground(.hidden)
+
+                    // Кнопка сохранения
+                    Button(action: {
+                        let updated = DiaryEntry(
+                            id: entry.id,
+                            date: entry.date,
+                            title: title,
+                            content: content
+                        )
+                        onSave(updated)
                         dismiss()
-                    } label: {
-                        Label("Удалить запись", systemImage: "trash")
-                            .frame(maxWidth: .infinity, alignment: .center)
+                    }) {
+                        Text("Сохранить")
+                            .fontWeight(.bold)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(title.isEmpty || content.isEmpty ? Color.gray.opacity(0.3) : Theme.accent)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                    .disabled(title.isEmpty || content.isEmpty)
+                    .animation(.easeInOut, value: title + content)
+
+                    // Кнопка удаления, если передана
+                    if let onDelete = onDelete {
+                        Button(role: .destructive) {
+                            onDelete()
+                            dismiss()
+                        } label: {
+                            Label("Удалить запись", systemImage: "trash")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.red.opacity(0.8))
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                        }
                     }
                 }
+                .padding()
             }
         }
         .navigationTitle("Редактировать")
-        .navigationBarItems(trailing: Button("Сохранить") {
-            let updated = DiaryEntry(
-                id: entry.id,
-                date: entry.date,
-                title: title,
-                content: content
-            )
-            onSave(updated)
-            dismiss()
-        }.disabled(title.isEmpty || content.isEmpty))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
