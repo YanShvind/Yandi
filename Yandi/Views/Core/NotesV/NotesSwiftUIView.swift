@@ -19,32 +19,46 @@ struct NotesSwiftUIView: View {
     @Namespace private var animation
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HeaderView()
-                .padding(.top, -50)
-            ScrollView(.vertical) {
-                VStack {
-                    /// Tasks View
+        ZStack {
+            Theme.backgroundGradient.ignoresSafeArea()
+
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .leading) {
+                    HeaderView()
+                    
+                    Divider()
+                        .frame(height: 0.5)
+                        .overlay(Color.gray.opacity(0.3))
+                        .padding(.horizontal, 16)
+                    
                     TasksView()
                 }
-                .hSpacing(.center)
-                .vSpacing(.center)
+               // .padding(.top, 16)
+                .padding(.bottom, 100)
             }
-            .scrollIndicators(.hidden)
+            
+            // Floating Button
+            .overlay(alignment: .bottom, content: {
+                Button {
+                    createNewTask.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .frame(width: 55, height: 55)
+                        .background(Color.blue.shadow(.drop(color: .black.opacity(0.1), radius: 5)), in: .circle)
+                }
+                .padding(15)
+            })
         }
-        .vSpacing(.top)
-        .overlay(alignment: .bottom, content: {
-            Button {
-                createNewTask.toggle()
-            } label: {
-                Image(systemName: "plus")
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(width: 55, height: 55)
-                    .background(Color.blue.shadow(.drop(color: .black.opacity(0.1), radius: 5)), in: .circle)
-            }
-            .padding(15)
-        })
+        .sheet(isPresented: $createNewTask) {
+            NewNoteView()
+                .presentationDetents([.height(300)])
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(30)
+                .presentationBackground(.ultraThinMaterial)
+        }
+        
         .onAppear(perform: {
             if weekSlider.isEmpty {
                 let currentWeek = Date().fetchWeek()
@@ -60,13 +74,6 @@ struct NotesSwiftUIView: View {
                 }
             }
         })
-        .sheet(isPresented: $createNewTask) {
-            NewNoteView()
-                .presentationDetents([.height(300)])
-                .interactiveDismissDisabled()
-                .presentationCornerRadius(30)
-                .presentationBackground(.purple)
-        }
     }
     
     // Header View
@@ -132,7 +139,9 @@ struct NotesSwiftUIView: View {
             }
         })
         .padding(15)
-        .background(Color(.secondarySystemBackground))
+      //  .background(.ultraThinMaterial)
+      //  .cornerRadius(16)
+     //   .shadow(radius: 5)
         .onChange(of: currentWeekIndex, initial: false) { oldValue, newValue in
             if newValue == 0 || newValue == (weekSlider.count - 1) {
                 createWeek = true

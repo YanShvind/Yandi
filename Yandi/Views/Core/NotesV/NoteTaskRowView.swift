@@ -26,7 +26,7 @@ struct NoteTaskRowView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(task.isCompleted ? .black : .primary)
                 
-                Text("Create a mobile app UI Kit that provides a basic notes functionality but with some improvement...")
+                Text(task.taskDescription ?? "")
                     .font(.subheadline)
                     .foregroundColor(.primary)
                     .lineLimit(2)
@@ -38,6 +38,7 @@ struct NoteTaskRowView: View {
             .strikethrough(task.isCompleted, pattern: .solid, color: .black)
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color(task.tint).opacity(task.isCompleted ? 0.6 : 0.2))

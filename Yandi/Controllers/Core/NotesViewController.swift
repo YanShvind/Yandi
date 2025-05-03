@@ -14,7 +14,7 @@ final class NotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.title = "Заметки"
+        navigationController?.setNavigationBarHidden(true, animated: false)
        // self.view.backgroundColor = .secondarySystemBackground
 
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(

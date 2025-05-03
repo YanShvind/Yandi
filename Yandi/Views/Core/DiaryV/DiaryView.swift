@@ -9,29 +9,34 @@ import SwiftUI
 
 struct DiarySwiftUIView: View {
     @ObservedObject var viewModel: DiaryViewModel
-    var onEntryTap: (DiaryEntry) -> Void  
+    var onEntryTap: (DiaryEntry) -> Void
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                ForEach(groupedEntries.keys.sorted(by: <), id: \.self) { month in
-                    Section(header: Text(month)
-                        .font(.title2)
-                        .bold()
-                        .padding(.horizontal)
-                        .padding(.top, 8)
-                    ) {
-                        ForEach(groupedEntries[month] ?? []) { entry in
-                            Button {
-                                onEntryTap(entry)  // вызываем замыкание при тапе
-                            } label: {
-                                DiaryCardView(entry: entry)
-                                    .padding(.horizontal)
+        ZStack {
+            Theme.backgroundGradient
+                .ignoresSafeArea()
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    ForEach(groupedEntries.keys.sorted(by: <), id: \.self) { month in
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(month)
+                                .font(Theme.headerFont)
+                                .padding(.horizontal)
+
+                            ForEach(groupedEntries[month] ?? []) { entry in
+                                Button {
+                                    onEntryTap(entry)
+                                } label: {
+                                    DiaryCardView(entry: entry)
+                                        .padding(.horizontal)
+                                }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
+                .padding(.vertical)
             }
         }
     }
@@ -45,4 +50,3 @@ struct DiarySwiftUIView: View {
         }
     }
 }
-

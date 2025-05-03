@@ -20,6 +20,7 @@
 		6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */; };
 		6D3D46692D8B455900F3E6E1 /* NotesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */; };
 		6D60CD1C2DC2E598006E5355 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */; };
+		6D61FC842DC6379B009198D2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61FC832DC6379B009198D2 /* Theme.swift */; };
 		6D7B1AF22DC55DE8004773DF /* NoteTaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */; };
 		6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */; };
 		6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B802DB439210082CBFB /* DiaryView.swift */; };
@@ -58,6 +59,7 @@
 		6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSwiftUIView.swift; sourceTree = "<group>"; };
 		6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
+		6D61FC832DC6379B009198D2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTaskRowView.swift; sourceTree = "<group>"; };
 		6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSwiftUIView.swift; sourceTree = "<group>"; };
 		6D8D4B802DB439210082CBFB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		6D3D464B2D88591300F3E6E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6D61FC832DC6379B009198D2 /* Theme.swift */,
 				6D3D464C2D88593000F3E6E1 /* ColorHex.swift */,
 				6DB72F9A2D9084A300A0A553 /* Notes */,
 			);
@@ -120,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				6DAB67D82DBFC3B1006BE1D0 /* TargetV */,
+				6D8D4BAE2DB7BDDE0082CBFB /* NotesV */,
 				6D8D4B842DB43C140082CBFB /* DiaryV */,
 				6DAB67DA2DBFC3CC006BE1D0 /* FriendsV */,
 				6DAB67D92DBFC3BE006BE1D0 /* ProfileV */,
@@ -321,7 +325,6 @@
 		6D997A5C2D88431800C64705 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				6D8D4BAE2DB7BDDE0082CBFB /* NotesV */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
 				6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */,
+				6D61FC842DC6379B009198D2 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
