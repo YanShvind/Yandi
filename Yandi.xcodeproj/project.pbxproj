@@ -120,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				6DAB67D82DBFC3B1006BE1D0 /* TargetV */,
-				6D8D4BAE2DB7BDDE0082CBFB /* NotesV */,
 				6D8D4B842DB43C140082CBFB /* DiaryV */,
 				6DAB67DA2DBFC3CC006BE1D0 /* FriendsV */,
 				6DAB67D92DBFC3BE006BE1D0 /* ProfileV */,
@@ -322,6 +321,7 @@
 		6D997A5C2D88431800C64705 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D4BAE2DB7BDDE0082CBFB /* NotesV */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";

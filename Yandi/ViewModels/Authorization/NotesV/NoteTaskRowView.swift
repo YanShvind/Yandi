@@ -30,6 +30,10 @@ struct NoteTaskRowView: View {
                     .font(.subheadline)
                     .foregroundColor(.primary)
                     .lineLimit(2)
+                
+                Label(task.creationDate.format("hh:mm a"), systemImage: "clock")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
             .strikethrough(task.isCompleted, pattern: .solid, color: .black)
         }

@@ -14,13 +14,14 @@ struct NotesSwiftUIView: View {
     @State private var weekSlider: [[Date.WeekDay]] = []
     @State private var currentWeekIndex: Int = 1
     @State private var createWeek: Bool = false
+    @State private var createNewTask: Bool = false
     
     @Namespace private var animation
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HeaderView()
-            
+                .padding(.top, -50)
             ScrollView(.vertical) {
                 VStack {
                     /// Tasks View
@@ -32,6 +33,18 @@ struct NotesSwiftUIView: View {
             .scrollIndicators(.hidden)
         }
         .vSpacing(.top)
+        .overlay(alignment: .bottom, content: {
+            Button {
+                createNewTask.toggle()
+            } label: {
+                Image(systemName: "plus")
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .frame(width: 55, height: 55)
+                    .background(Color.blue.shadow(.drop(color: .black.opacity(0.1), radius: 5)), in: .circle)
+            }
+            .padding(15)
+        })
         .onAppear(perform: {
             if weekSlider.isEmpty {
                 let currentWeek = Date().fetchWeek()
@@ -47,6 +60,13 @@ struct NotesSwiftUIView: View {
                 }
             }
         })
+        .sheet(isPresented: $createNewTask) {
+            NewNoteView()
+                .presentationDetents([.height(300)])
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(30)
+                .presentationBackground(.purple)
+        }
     }
     
     // Header View

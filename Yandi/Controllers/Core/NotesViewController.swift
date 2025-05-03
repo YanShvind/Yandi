@@ -14,7 +14,7 @@ final class NotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Заметки"
+        //self.title = "Заметки"
        // self.view.backgroundColor = .secondarySystemBackground
 
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(
