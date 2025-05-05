@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct NoteTaskRowView: View {
-    @Binding var task: Task
-    
+    @Bindable var task: Task
+    @Environment(\.modelContext) private var context
+
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Button(action: {
-                task.isCompleted.toggle()
+                withAnimation {
+                    task.isCompleted.toggle()
+                    do {
+                        try context.save()
+                    } catch {
+                        print("Ошибка при сохранении: \(error.localizedDescription)")
+                    }
+                }
             }) {
                 Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(Color(task.tint))
@@ -41,22 +49,18 @@ struct NoteTaskRowView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 12)
-                .fill(Color(task.tint).opacity(task.isCompleted ? 0.6 : 0.2))
+                .fill(Color(task.tint).opacity(task.isCompleted ? 0.6 : 0.4))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(task.isCompleted ? Color(task.tint) : .clear, lineWidth: 1)
         )
         .padding(.horizontal)
-    }
-}
-
-#Preview {
-    VStack(spacing: 0) {
-        NoteTaskRowView(task: .constant(sampleTasks[0]))
-        
-        NoteTaskRowView(task: .constant(sampleTasks[1]))
-        
-        NoteTaskRowView(task: .constant(sampleTasks.last!))
+        .contextMenu {
+            Button("Delete Task", role: .destructive) {
+                context.delete(task)
+                try? context.save()
+            }
+        }
     }
 }

@@ -9,13 +9,15 @@ import SwiftUI
 
 struct NewNoteView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
+    
     @State var taskText: String = ""
     @State var taskDescription: String = ""
     @State var taskDate: Date = .init()
-    @State var taskColor: Color = .blue
+    @State var taskColor: TintColor = .blue
     
-    let colors: [Color] = [.blue, .red, .purple, .green, .yellow]
-    
+    let colors = TintColor.allCases
+
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Button(action: {
@@ -28,7 +30,7 @@ struct NewNoteView: View {
             .hSpacing(.leading)
             
             VStack(alignment: .leading, spacing: 8) {
-                Text("Task Title")
+                Text("Заголовок:")
                     .font(.caption)
                     .foregroundStyle(.gray)
                 
@@ -38,12 +40,25 @@ struct NewNoteView: View {
                     .background(.ultraThinMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.top, 5)
+                
+                Text("Описание:")
+                    .font(.caption)
+                    .foregroundStyle(.gray)
+                    .padding(.top, 12)
+                
+                TextField("Syka naxyi blyat", text: $taskDescription)
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 15)
+                    .background(.ultraThinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.top, 5)
+                
             }
             .padding(.top, 5)
             
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Task Date")
+                    Text("Дата:")
                         .font(.caption)
                         .foregroundStyle(.gray)
                     
@@ -55,25 +70,25 @@ struct NewNoteView: View {
                 .padding(.trailing, -15)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Task Color")
+                    Text("Цвет:")
                         .font(.caption)
                         .foregroundStyle(.gray)
                     
                     HStack(spacing: 0) {
-                        ForEach(colors, id: \.self) { color in
+                        ForEach(colors, id: \.self) { tint in
                             Circle()
-                                .fill(color)
+                                .fill(tint.color)
                                 .frame(width: 20, height: 20)
                                 .background(content: {
                                     Circle()
                                         .stroke(lineWidth: 2)
-                                        .opacity(taskColor == color ? 1 : 0)
+                                        .opacity(taskColor == tint ? 1 : 0)
                                 })
                                 .hSpacing(.center)
                                 .contentShape(.rect)
                                 .onTapGesture {
                                     withAnimation {
-                                        taskColor = color
+                                        taskColor = tint
                                     }
                                 }
                         }
@@ -84,7 +99,19 @@ struct NewNoteView: View {
             Spacer(minLength: 0)
             
             Button {
-                print("DD")
+                let task = Task(
+                    taskTitle: taskText,
+                    taskDescription: taskDescription,
+                    creationDate: taskDate,
+                    tint: taskColor.rawValue
+                )
+                do {
+                    context.insert(task)
+                    try context.save()
+                    dismiss()
+                } catch {
+                    print(error.localizedDescription)
+                }
             } label: {
                 Text("Создать заметку")
                     .font(.title3)
@@ -93,7 +120,7 @@ struct NewNoteView: View {
                     .foregroundStyle(.black)
                     .hSpacing(.center)
                     .padding(.vertical, 12)
-                    .background(taskColor, in: .rect(cornerRadius: 10))
+                    .background(taskColor.color, in: .rect(cornerRadius: 10))
             }
             .disabled(taskText == "")
             .opacity(taskText == "" ? 0.5 : 1)

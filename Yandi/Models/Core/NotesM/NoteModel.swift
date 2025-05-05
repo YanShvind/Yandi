@@ -6,47 +6,56 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
+import SwiftData
 
-struct Task: Identifiable {
-    var id: UUID = .init()
+@Model
+class Task: Identifiable {
+    var id: UUID
     var taskTitle: String
     var taskDescription: String?
-    var creationDate: Date = .init()
-    var isCompleted: Bool = false
-    var tint: UIColor
+    var creationDate: Date
+    var isCompleted: Bool 
+    var tint: String
+    
+    init(id: UUID = .init(), taskTitle: String, taskDescription: String? = nil, creationDate: Date = .init(), isCompleted: Bool = false, tint: String) {
+        self.id = id
+        self.taskTitle = taskTitle
+        self.taskDescription = taskDescription
+        self.creationDate = creationDate
+        self.isCompleted = isCompleted
+        self.tint = tint
+    }
+    
+    var tintColor: Color {
+        switch tint {
+        case "blue": return .blue
+        case "red": return .red
+        case "purple": return .purple
+        case "green": return .green
+        case "yellow": return .yellow
+        default: return .black
+        }
+    }
 }
 
-var sampleTasks: [Task] = [
-    Task(
-        taskTitle: "Record Video",
-        creationDate: .updateHour(-5),
-        isCompleted: true,
-        tint: UIColor(.blue)
-    ),
-    Task(
-        taskTitle: "Redesign Website",
-        taskDescription: "Make it look modern and clean. Pidarasi idyt naxyiMake it look modern and clean. Pidarasi idyt naxyiMake it look modern and clean. Pidarasi idyt naxyiMake it look modern and clean. Pidarasi idyt naxyi",
-        creationDate: .updateHour(-3),
-        tint: UIColor(.red)
-    ),
-    Task(
-        taskTitle: "Go for a Walk",
-        creationDate: .updateHour(-4),
-        tint: UIColor(.purple)
-    ),
-    Task(
-        taskTitle: "Publish Video",
-        creationDate: .updateHour(2),
-        isCompleted: true,
-        tint: UIColor(.green)
-    ),
-    Task(
-        taskTitle: "Tweet about new Video!",
-        creationDate: .updateHour(1),
-        tint: UIColor(.yellow)
-    )
-]
+enum TintColor: String, CaseIterable {
+    case blue, red, purple, green, yellow
+    
+    var color: Color {
+        switch self {
+        case .blue: return .blue
+        case .red: return .red
+        case .purple: return .purple
+        case .green: return .green
+        case .yellow: return .yellow
+        }
+    }
+    
+    static func from(color: Color) -> TintColor? {
+        return TintColor.allCases.first { $0.color == color }
+    }
+}
 
 extension Date {
     static func updateHour(_ value: Int) -> Date {
