@@ -13,9 +13,10 @@ struct NotesSwiftUIView: View {
     @State private var currentWeekIndex: Int = 1
     @State private var createWeek: Bool = false
     @State private var createNewTask: Bool = false
-    
+    @State private var editingTask: Task? = nil
+
     @Namespace private var animation
-    
+
     var body: some View {
         ZStack {
             Theme.backgroundGradient.ignoresSafeArea()
@@ -23,18 +24,17 @@ struct NotesSwiftUIView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {
                     HeaderView()
-                    
+
                     Divider()
                         .frame(height: 0.5)
                         .overlay(Color.gray.opacity(0.3))
                         .padding(.horizontal, 16)
-                    
-                    NoteView(currentDate: $currentDate)
+
+                    NoteView(currentDate: $currentDate, editingTask: $editingTask)
                 }
-               // .padding(.top, 16)
                 .padding(.bottom, 100)
             }
-            
+
             // Floating Button
             .overlay(alignment: .bottom, content: {
                 Button {
@@ -49,6 +49,7 @@ struct NotesSwiftUIView: View {
                 .padding(15)
             })
         }
+
         .sheet(isPresented: $createNewTask) {
             NewNoteView()
                 .presentationDetents([.height(400)])
@@ -56,37 +57,46 @@ struct NotesSwiftUIView: View {
                 .presentationCornerRadius(30)
                 .presentationBackground(.ultraThinMaterial)
         }
-        
-        .onAppear(perform: {
+
+        .sheet(item: $editingTask) { task in
+            EditNoteView(task: task)
+                .presentationDetents([.height(400)])
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(30)
+                .presentationBackground(.ultraThinMaterial)
+        }
+
+        .onAppear {
             if weekSlider.isEmpty {
                 let currentWeek = Date().fetchWeek()
-                
+
                 if let firstDate = currentWeek.first?.date {
                     weekSlider.append(firstDate.createPreviousWeek())
                 }
-                
+
                 weekSlider.append(currentWeek)
-                
+
                 if let lastDate = currentWeek.last?.date {
                     weekSlider.append(lastDate.createNextWeek())
                 }
             }
-        })
+        }
     }
     
     // Header View
     @ViewBuilder
     func HeaderView() -> some View {
+        
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 5) {
-                Text(currentDate.format("MMMM"))
+                Text(currentDate.formatted(.dateTime.month().locale(Locale(identifier: "ru_RU"))).capitalized)
                     .foregroundStyle(.blue)
-                Text(currentDate.format("YYYY"))
+                Text(currentDate.formatted(.dateTime.year().locale(Locale(identifier: "ru_RU"))))
                     .foregroundStyle(.gray)
             }
             .font(.title.bold())
             
-            Text(currentDate.formatted(date: .complete, time: .omitted))
+            Text(currentDate.formatted(.dateTime.locale(Locale(identifier: "ru_RU")).day().month(.wide).year()))
                 .font(.callout)
                 .fontWeight(.semibold)
                 .textScale(.default)
@@ -150,13 +160,13 @@ struct NotesSwiftUIView: View {
         HStack(spacing: 0) {
             ForEach(week) { day in
                 VStack(spacing: 8) {
-                    Text(day.date.format("E"))
+                    Text(day.date.formatted(.dateTime.weekday(.short).locale(Locale(identifier: "ru_RU"))))
                         .font(.callout)
                         .fontWeight(.medium)
                         .textScale(.secondary)
                         .foregroundStyle(.gray)
-                    
-                    Text(day.date.format("dd"))
+
+                    Text(day.date.formatted(.dateTime.day(.twoDigits).locale(Locale(identifier: "ru_RU"))))
                         .font(.callout)
                         .fontWeight(.bold)
                         .textScale(.secondary)

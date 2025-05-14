@@ -7,30 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D1443C72DA79C1A00BF0E0F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1443C62DA79C1A00BF0E0F /* ProfileSwiftUIView.swift */; };
+		6D1443C72DA79C1A00BF0E0F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1443C62DA79C1A00BF0E0F /* SettingsView.swift */; };
 		6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D464C2D88593000F3E6E1 /* ColorHex.swift */; };
 		6D3D464F2D885A8200F3E6E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D464E2D885A8200F3E6E1 /* RegisterViewController.swift */; };
 		6D3D46512D885A9F00F3E6E1 /* RegisterSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46502D885A9F00F3E6E1 /* RegisterSwiftUIView.swift */; };
 		6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46522D885AFE00F3E6E1 /* LoginViewController.swift */; };
 		6D3D46552D885B4100F3E6E1 /* LoginSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46542D885B4100F3E6E1 /* LoginSwiftUIView.swift */; };
-		6D3D465F2D8B120500F3E6E1 /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */; };
 		6D3D46612D8B121F00F3E6E1 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */; };
 		6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */; };
-		6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */; };
-		6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */; };
+		6D3D46652D8B124700F3E6E1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46642D8B124700F3E6E1 /* CalendarViewController.swift */; };
+		6D3D46672D8B125300F3E6E1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46662D8B125300F3E6E1 /* SettingsViewController.swift */; };
 		6D3D46692D8B455900F3E6E1 /* NotesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */; };
 		6D60CD1C2DC2E598006E5355 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */; };
 		6D61FC842DC6379B009198D2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61FC832DC6379B009198D2 /* Theme.swift */; };
+		6D6971872DD4DCBE00C214E8 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971862DD4DCBE00C214E8 /* EditNoteView.swift */; };
 		6D7B1AF22DC55DE8004773DF /* NoteTaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */; };
-		6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */; };
 		6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B802DB439210082CBFB /* DiaryView.swift */; };
-		6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */; };
+		6D8D4B832DB439380082CBFB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B822DB439380082CBFB /* CalendarView.swift */; };
 		6D8D4B862DB513680082CBFB /* DiaryAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B852DB513680082CBFB /* DiaryAddView.swift */; };
 		6D8D4B882DB513AA0082CBFB /* DiaryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B872DB513AA0082CBFB /* DiaryEditView.swift */; };
 		6D8D4B8B2DB6AAE60082CBFB /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8A2DB6AAE60082CBFB /* NoteModel.swift */; };
 		6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B8C2DB6AB000082CBFB /* NoteStore.swift */; };
 		6D8D4BB02DB7BE2D0082CBFB /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BAF2DB7BE2D0082CBFB /* NewNoteView.swift */; };
-		6D8D4BB22DB7BE5F0082CBFB /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB12DB7BE5F0082CBFB /* NoteEditorView.swift */; };
 		6D8D4BB52DB90F660082CBFB /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB42DB90F660082CBFB /* DiaryEntry.swift */; };
 		6D8D4BB82DB90FAC0082CBFB /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB72DB90FAC0082CBFB /* DiaryViewModel.swift */; };
 		6D8D4BBA2DB9A6FA0082CBFB /* DiaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4BB92DB9A6FA0082CBFB /* DiaryCardView.swift */; };
@@ -44,33 +42,32 @@
 		6DB72F9C2D9084B700A0A553 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB72F9B2D9084B700A0A553 /* View+Extension.swift */; };
 		6DB72F9E2D9084C600A0A553 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB72F9D2D9084C600A0A553 /* Date+Extension.swift */; };
 		6DC683252DC8EF8100332B7C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC683242DC8EF8100332B7C /* NoteView.swift */; };
+		6DC683272DC9172100332B7C /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC683262DC9172100332B7C /* SettingsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D1443C62DA79C1A00BF0E0F /* ProfileSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwiftUIView.swift; sourceTree = "<group>"; };
+		6D1443C62DA79C1A00BF0E0F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6D3D464C2D88593000F3E6E1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
 		6D3D464E2D885A8200F3E6E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6D3D46502D885A9F00F3E6E1 /* RegisterSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSwiftUIView.swift; sourceTree = "<group>"; };
 		6D3D46522D885AFE00F3E6E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D3D46542D885B4100F3E6E1 /* LoginSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSwiftUIView.swift; sourceTree = "<group>"; };
-		6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
 		6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6D3D46642D8B124700F3E6E1 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		6D3D46662D8B125300F3E6E1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D3D46682D8B455900F3E6E1 /* NotesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSwiftUIView.swift; sourceTree = "<group>"; };
 		6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		6D61FC832DC6379B009198D2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6D6971862DD4DCBE00C214E8 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
 		6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTaskRowView.swift; sourceTree = "<group>"; };
-		6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSwiftUIView.swift; sourceTree = "<group>"; };
 		6D8D4B802DB439210082CBFB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
-		6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSwiftUIView.swift; sourceTree = "<group>"; };
+		6D8D4B822DB439380082CBFB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		6D8D4B852DB513680082CBFB /* DiaryAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddView.swift; sourceTree = "<group>"; };
 		6D8D4B872DB513AA0082CBFB /* DiaryEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditView.swift; sourceTree = "<group>"; };
 		6D8D4B8A2DB6AAE60082CBFB /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		6D8D4B8C2DB6AB000082CBFB /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		6D8D4BAF2DB7BE2D0082CBFB /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
-		6D8D4BB12DB7BE5F0082CBFB /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
 		6D8D4BB42DB90F660082CBFB /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryEntry.swift; path = Yandi/Models/Core/NotesM/DiaryEntry.swift; sourceTree = SOURCE_ROOT; };
 		6D8D4BB72DB90FAC0082CBFB /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		6D8D4BB92DB9A6FA0082CBFB /* DiaryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCardView.swift; sourceTree = "<group>"; };
@@ -86,6 +83,7 @@
 		6DB72F9B2D9084B700A0A553 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		6DB72F9D2D9084C600A0A553 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		6DC683242DC8EF8100332B7C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		6DC683262DC9172100332B7C /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +110,10 @@
 		6D3D46562D8B060200F3E6E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6D3D465E2D8B120500F3E6E1 /* TargetViewController.swift */,
 				6D3D46602D8B121F00F3E6E1 /* NotesViewController.swift */,
 				6D3D46622D8B123900F3E6E1 /* DiaryViewController.swift */,
-				6D3D46642D8B124700F3E6E1 /* FriendsViewController.swift */,
-				6D3D46662D8B125300F3E6E1 /* ProfileViewController.swift */,
+				6D3D46642D8B124700F3E6E1 /* CalendarViewController.swift */,
+				6D3D46662D8B125300F3E6E1 /* SettingsViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -124,11 +121,10 @@
 		6D3D46572D8B062000F3E6E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6DAB67D82DBFC3B1006BE1D0 /* TargetV */,
 				6D8D4BAE2DB7BDDE0082CBFB /* NotesV */,
 				6D8D4B842DB43C140082CBFB /* DiaryV */,
-				6DAB67DA2DBFC3CC006BE1D0 /* FriendsV */,
-				6DAB67D92DBFC3BE006BE1D0 /* ProfileV */,
+				6DAB67DA2DBFC3CC006BE1D0 /* CalendarV */,
+				6DAB67D92DBFC3BE006BE1D0 /* SettingsV */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -146,20 +142,6 @@
 			children = (
 				6D8D4BB32DB7BF210082CBFB /* NotesM */,
 				6D8D4B892DB6AACA0082CBFB /* Diary */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D465A2D8B114600F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		6D3D465B2D8B115100F3E6E1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -190,7 +172,7 @@
 				6DC683242DC8EF8100332B7C /* NoteView.swift */,
 				6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */,
 				6D8D4BAF2DB7BE2D0082CBFB /* NewNoteView.swift */,
-				6D8D4BB12DB7BE5F0082CBFB /* NoteEditorView.swift */,
+				6D6971862DD4DCBE00C214E8 /* EditNoteView.swift */,
 			);
 			path = NotesV;
 			sourceTree = "<group>";
@@ -236,8 +218,6 @@
 				6D997A552D85A01700C64705 /* ViewModels */,
 				6D997A542D859FF400C64705 /* Views */,
 				6D997A532D859F0A00C64705 /* Controllers */,
-				6D997A572D88414D00C64705 /* Services */,
-				6D997A592D8841F300C64705 /* Networking */,
 				6D3D464B2D88591300F3E6E1 /* Extensions */,
 				6D997A5A2D88424000C64705 /* Resources */,
 				6D997A4C2D859D3000C64705 /* Info.plist */,
@@ -283,15 +263,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		6D997A572D88414D00C64705 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				6D997A5F2D88434600C64705 /* Authorization */,
-				6D3D465A2D8B114600F3E6E1 /* Core */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		6D997A582D88418700C64705 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,15 +270,6 @@
 				6D3D46592D8B064400F3E6E1 /* Core */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		6D997A592D8841F300C64705 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				6D997A602D88435000C64705 /* Authorization */,
-				6D3D465B2D8B115100F3E6E1 /* Core */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		6D997A5A2D88424000C64705 /* Resources */ = {
@@ -352,42 +314,21 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
-		6D997A5F2D88434600C64705 /* Authorization */ = {
+		6DAB67D92DBFC3BE006BE1D0 /* SettingsV */ = {
 			isa = PBXGroup;
 			children = (
+				6D1443C62DA79C1A00BF0E0F /* SettingsView.swift */,
+				6DC683262DC9172100332B7C /* SettingsRow.swift */,
 			);
-			path = Authorization;
+			path = SettingsV;
 			sourceTree = "<group>";
 		};
-		6D997A602D88435000C64705 /* Authorization */ = {
+		6DAB67DA2DBFC3CC006BE1D0 /* CalendarV */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D4B822DB439380082CBFB /* CalendarView.swift */,
 			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		6DAB67D82DBFC3B1006BE1D0 /* TargetV */ = {
-			isa = PBXGroup;
-			children = (
-				6D8D4B7E2DB439110082CBFB /* TargetSwiftUIView.swift */,
-			);
-			path = TargetV;
-			sourceTree = "<group>";
-		};
-		6DAB67D92DBFC3BE006BE1D0 /* ProfileV */ = {
-			isa = PBXGroup;
-			children = (
-				6D1443C62DA79C1A00BF0E0F /* ProfileSwiftUIView.swift */,
-			);
-			path = ProfileV;
-			sourceTree = "<group>";
-		};
-		6DAB67DA2DBFC3CC006BE1D0 /* FriendsV */ = {
-			isa = PBXGroup;
-			children = (
-				6D8D4B822DB439380082CBFB /* FriendsSwiftUIView.swift */,
-			);
-			path = FriendsV;
+			path = CalendarV;
 			sourceTree = "<group>";
 		};
 		6DB72F9A2D9084A300A0A553 /* Notes */ = {
@@ -478,30 +419,29 @@
 				6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */,
 				6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */,
 				6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */,
-				6D8D4B832DB439380082CBFB /* FriendsSwiftUIView.swift in Sources */,
+				6D8D4B832DB439380082CBFB /* CalendarView.swift in Sources */,
 				6D8D4B882DB513AA0082CBFB /* DiaryEditView.swift in Sources */,
-				6D3D46652D8B124700F3E6E1 /* FriendsViewController.swift in Sources */,
+				6D6971872DD4DCBE00C214E8 /* EditNoteView.swift in Sources */,
+				6D3D46652D8B124700F3E6E1 /* CalendarViewController.swift in Sources */,
+				6DC683272DC9172100332B7C /* SettingsRow.swift in Sources */,
 				6D8D4B8B2DB6AAE60082CBFB /* NoteModel.swift in Sources */,
 				6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */,
 				6D3D464F2D885A8200F3E6E1 /* RegisterViewController.swift in Sources */,
 				6D997A432D859D2F00C64705 /* TabBarViewController.swift in Sources */,
 				6D8D4BB82DB90FAC0082CBFB /* DiaryViewModel.swift in Sources */,
-				6D8D4BB22DB7BE5F0082CBFB /* NoteEditorView.swift in Sources */,
 				6D997A642D88442200C64705 /* WelcomeViewController.swift in Sources */,
 				6D8D4BB52DB90F660082CBFB /* DiaryEntry.swift in Sources */,
 				6D3D46512D885A9F00F3E6E1 /* RegisterSwiftUIView.swift in Sources */,
 				6D3D46612D8B121F00F3E6E1 /* NotesViewController.swift in Sources */,
 				6D3D46632D8B123900F3E6E1 /* DiaryViewController.swift in Sources */,
-				6D3D465F2D8B120500F3E6E1 /* TargetViewController.swift in Sources */,
-				6D3D46672D8B125300F3E6E1 /* ProfileViewController.swift in Sources */,
+				6D3D46672D8B125300F3E6E1 /* SettingsViewController.swift in Sources */,
 				6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */,
 				6DB72F9C2D9084B700A0A553 /* View+Extension.swift in Sources */,
 				6DC683252DC8EF8100332B7C /* NoteView.swift in Sources */,
 				6DB72F9E2D9084C600A0A553 /* Date+Extension.swift in Sources */,
 				6D60CD1C2DC2E598006E5355 /* OffsetKey.swift in Sources */,
-				6D1443C72DA79C1A00BF0E0F /* ProfileSwiftUIView.swift in Sources */,
+				6D1443C72DA79C1A00BF0E0F /* SettingsView.swift in Sources */,
 				6D8D4BBA2DB9A6FA0082CBFB /* DiaryCardView.swift in Sources */,
-				6D8D4B7F2DB439110082CBFB /* TargetSwiftUIView.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
 				6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */,
 				6D61FC842DC6379B009198D2 /* Theme.swift in Sources */,
@@ -653,8 +593,8 @@
 				INFOPLIST_FILE = Yandi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,6 +602,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appYa.Yandi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -680,8 +624,8 @@
 				INFOPLIST_FILE = Yandi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,6 +633,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appYa.Yandi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
