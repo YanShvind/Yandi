@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NoteTaskRowView: View {
     @Bindable var task: Task
+    var onTap: () -> Void
+
     @Environment(\.modelContext) private var context
 
     var body: some View {
@@ -16,11 +18,7 @@ struct NoteTaskRowView: View {
             Button(action: {
                 withAnimation {
                     task.isCompleted.toggle()
-                    do {
-                        try context.save()
-                    } catch {
-                        print("Ошибка при сохранении: \(error.localizedDescription)")
-                    }
+                    try? context.save()
                 }
             }) {
                 Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
@@ -33,12 +31,12 @@ struct NoteTaskRowView: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(task.isCompleted ? .black : .primary)
-                
+
                 Text(task.taskDescription ?? "")
                     .font(.subheadline)
                     .foregroundColor(.primary)
                     .lineLimit(2)
-                
+
                 Label(task.creationDate.format("hh:mm a"), systemImage: "clock")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -57,10 +55,13 @@ struct NoteTaskRowView: View {
         )
         .padding(.horizontal)
         .contextMenu {
-            Button("Delete Task", role: .destructive) {
+            Button("Удалить заметку", role: .destructive) {
                 context.delete(task)
                 try? context.save()
             }
+        }
+        .onTapGesture {
+            onTap()
         }
     }
 }

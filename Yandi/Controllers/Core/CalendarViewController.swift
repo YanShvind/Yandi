@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  FriendsViewController.swift
 //  Yandi
 //
 //  Created by Yan Shvyndikov on 19.03.2025.
@@ -8,19 +8,20 @@
 import UIKit
 import SwiftUI
 
-final class ProfileViewController: UIViewController {
+final class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .systemMint
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         setupSwiftUIView()
     }
     
     private func setupSwiftUIView() {
-        let profileView = ProfileSwiftUIView()
+        let calendarView = CalendarView()
 
-        let hostingController = UIHostingController(rootView: profileView)
+        let hostingController = UIHostingController(rootView: calendarView)
         addChild(hostingController)
         view.addSubview(hostingController.view)
 

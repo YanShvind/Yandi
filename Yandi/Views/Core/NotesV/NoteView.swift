@@ -10,29 +10,30 @@ import SwiftData
 
 struct NoteView: View {
     @Binding var currentDate: Date
-    
-    /// SwiftData Dynamic Query
+    @Binding var editingTask: Task?
+
     @Query private var tasks: [Task]
-    
-    init(currentDate: Binding<Date>) {
+
+    init(currentDate: Binding<Date>, editingTask: Binding<Task?>) {
         self._currentDate = currentDate
+        self._editingTask = editingTask
+
         let calendar = Calendar.current
         let startOfDate = calendar.startOfDay(for: currentDate.wrappedValue)
         let endOfDate = calendar.date(byAdding: .day, value: 1, to: startOfDate)!
         let predicate = #Predicate<Task> {
-            return $0.creationDate >= startOfDate && $0.creationDate < endOfDate
+            $0.creationDate >= startOfDate && $0.creationDate < endOfDate
         }
-        /// Sorting
+
         let sortDescriptor = [
             SortDescriptor(\Task.creationDate, order: .reverse)
         ]
+
         self._tasks = Query(filter: predicate, sort: sortDescriptor, animation: .snappy)
     }
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            
-            // АКТИВНЫЕ ЗАМЕТКИ
             let activeTasks = tasks.filter { !$0.isCompleted }
             if !activeTasks.isEmpty {
                 Text("АКТИВНЫЕ ЗАМЕТКИ")
@@ -43,15 +44,14 @@ struct NoteView: View {
 
                 VStack(spacing: 15) {
                     ForEach(activeTasks) { task in
-                        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
-                            NoteTaskRowView(task: tasks[index])
+                        NoteTaskRowView(task: task) {
+                            editingTask = task
                         }
                     }
                 }
                 .padding(.horizontal, 15)
             }
 
-            // ВЫПОЛНЕННЫЕ ЗАМЕТКИ
             let completedTasks = tasks.filter { $0.isCompleted }
             if !completedTasks.isEmpty {
                 Text("ВЫПОЛНЕННЫЕ ЗАМЕТКИ")
@@ -63,8 +63,8 @@ struct NoteView: View {
 
                 VStack(spacing: 15) {
                     ForEach(completedTasks) { task in
-                        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
-                            NoteTaskRowView(task: tasks[index])
+                        NoteTaskRowView(task: task) {
+                            editingTask = task
                         }
                     }
                 }
