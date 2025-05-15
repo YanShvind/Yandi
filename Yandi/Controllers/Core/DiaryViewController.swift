@@ -14,7 +14,7 @@ final class DiaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Дневник"
+     //   self.title = "Дневник"
         self.view.backgroundColor = .systemBackground
         setupSwiftUIView()
         
