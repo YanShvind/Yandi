@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DiaryEntry: Identifiable {
+struct DiaryEntry: Identifiable, Codable {
     let id: UUID
     var date: Date
     var title: String
