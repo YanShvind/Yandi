@@ -21,6 +21,12 @@
 		6D60CD1C2DC2E598006E5355 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */; };
 		6D61FC842DC6379B009198D2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D61FC832DC6379B009198D2 /* Theme.swift */; };
 		6D6971872DD4DCBE00C214E8 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971862DD4DCBE00C214E8 /* EditNoteView.swift */; };
+		6D69718F2DD68B5B00C214E8 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69718E2DD68B5B00C214E8 /* NotificationModel.swift */; };
+		6D6971922DD68B9100C214E8 /* CalindarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971912DD68B9100C214E8 /* CalindarViewModel.swift */; };
+		6D6971952DD68BBC00C214E8 /* CalendarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971942DD68BBC00C214E8 /* CalendarUtils.swift */; };
+		6D6971972DD68BFD00C214E8 /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971962DD68BFD00C214E8 /* CalendarMonthView.swift */; };
+		6D6971992DD68C1300C214E8 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6971982DD68C1300C214E8 /* DayView.swift */; };
+		6D69719B2DD68C2500C214E8 /* NotePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69719A2DD68C2500C214E8 /* NotePopupView.swift */; };
 		6D7B1AF22DC55DE8004773DF /* NoteTaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */; };
 		6D8D4B812DB439210082CBFB /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B802DB439210082CBFB /* DiaryView.swift */; };
 		6D8D4B832DB439380082CBFB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D4B822DB439380082CBFB /* CalendarView.swift */; };
@@ -39,6 +45,7 @@
 		6D997A4B2D859D3000C64705 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6D997A4A2D859D3000C64705 /* Base */; };
 		6D997A642D88442200C64705 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A632D88442200C64705 /* WelcomeViewController.swift */; };
 		6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D997A652D88446A00C64705 /* WelcomeSwiftUIView.swift */; };
+		6DB7055A2DDBC71100FE3051 /* NoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB705592DDBC71100FE3051 /* NoteStorage.swift */; };
 		6DB72F9C2D9084B700A0A553 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB72F9B2D9084B700A0A553 /* View+Extension.swift */; };
 		6DB72F9E2D9084C600A0A553 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB72F9D2D9084C600A0A553 /* Date+Extension.swift */; };
 		6DC683252DC8EF8100332B7C /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC683242DC8EF8100332B7C /* NoteView.swift */; };
@@ -60,6 +67,12 @@
 		6D60CD1B2DC2E598006E5355 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		6D61FC832DC6379B009198D2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		6D6971862DD4DCBE00C214E8 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
+		6D69718E2DD68B5B00C214E8 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		6D6971912DD68B9100C214E8 /* CalindarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalindarViewModel.swift; sourceTree = "<group>"; };
+		6D6971942DD68BBC00C214E8 /* CalendarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUtils.swift; sourceTree = "<group>"; };
+		6D6971962DD68BFD00C214E8 /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
+		6D6971982DD68C1300C214E8 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		6D69719A2DD68C2500C214E8 /* NotePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePopupView.swift; sourceTree = "<group>"; };
 		6D7B1AF12DC55DE8004773DF /* NoteTaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTaskRowView.swift; sourceTree = "<group>"; };
 		6D8D4B802DB439210082CBFB /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		6D8D4B822DB439380082CBFB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -80,6 +93,7 @@
 		6D997A4C2D859D3000C64705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D997A632D88442200C64705 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D997A652D88446A00C64705 /* WelcomeSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSwiftUIView.swift; sourceTree = "<group>"; };
+		6DB705592DDBC71100FE3051 /* NoteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStorage.swift; sourceTree = "<group>"; };
 		6DB72F9B2D9084B700A0A553 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		6DB72F9D2D9084C600A0A553 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		6DC683242DC8EF8100332B7C /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
@@ -103,6 +117,7 @@
 				6D61FC832DC6379B009198D2 /* Theme.swift */,
 				6D3D464C2D88593000F3E6E1 /* ColorHex.swift */,
 				6DB72F9A2D9084A300A0A553 /* Notes */,
+				6D6971932DD68BA900C214E8 /* Calendar */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6D8D4BB62DB90F970082CBFB /* DiaryVM */,
+				6D6971902DD68B7D00C214E8 /* CalendarVM */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -142,8 +158,33 @@
 			children = (
 				6D8D4BB32DB7BF210082CBFB /* NotesM */,
 				6D8D4B892DB6AACA0082CBFB /* Diary */,
+				6D69718D2DD68B2300C214E8 /* Calendar */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		6D69718D2DD68B2300C214E8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6D69718E2DD68B5B00C214E8 /* NotificationModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		6D6971902DD68B7D00C214E8 /* CalendarVM */ = {
+			isa = PBXGroup;
+			children = (
+				6D6971912DD68B9100C214E8 /* CalindarViewModel.swift */,
+			);
+			path = CalendarVM;
+			sourceTree = "<group>";
+		};
+		6D6971932DD68BA900C214E8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6D6971942DD68BBC00C214E8 /* CalendarUtils.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		6D8D4B842DB43C140082CBFB /* DiaryV */ = {
@@ -218,6 +259,7 @@
 				6D997A552D85A01700C64705 /* ViewModels */,
 				6D997A542D859FF400C64705 /* Views */,
 				6D997A532D859F0A00C64705 /* Controllers */,
+				6DB705582DDBC6F100FE3051 /* Storage */,
 				6D3D464B2D88591300F3E6E1 /* Extensions */,
 				6D997A5A2D88424000C64705 /* Resources */,
 				6D997A4C2D859D3000C64705 /* Info.plist */,
@@ -327,8 +369,27 @@
 			isa = PBXGroup;
 			children = (
 				6D8D4B822DB439380082CBFB /* CalendarView.swift */,
+				6D6971962DD68BFD00C214E8 /* CalendarMonthView.swift */,
+				6D6971982DD68C1300C214E8 /* DayView.swift */,
+				6D69719A2DD68C2500C214E8 /* NotePopupView.swift */,
 			);
 			path = CalendarV;
+			sourceTree = "<group>";
+		};
+		6DB705582DDBC6F100FE3051 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				6DB7055B2DDBC74600FE3051 /* Calendar */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		6DB7055B2DDBC74600FE3051 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6DB705592DDBC71100FE3051 /* NoteStorage.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		6DB72F9A2D9084A300A0A553 /* Notes */ = {
@@ -418,9 +479,13 @@
 				6D8D4BB02DB7BE2D0082CBFB /* NewNoteView.swift in Sources */,
 				6D3D46532D885AFE00F3E6E1 /* LoginViewController.swift in Sources */,
 				6D997A662D88446A00C64705 /* WelcomeSwiftUIView.swift in Sources */,
+				6D6971952DD68BBC00C214E8 /* CalendarUtils.swift in Sources */,
 				6D3D464D2D88593000F3E6E1 /* ColorHex.swift in Sources */,
 				6D8D4B832DB439380082CBFB /* CalendarView.swift in Sources */,
 				6D8D4B882DB513AA0082CBFB /* DiaryEditView.swift in Sources */,
+				6DB7055A2DDBC71100FE3051 /* NoteStorage.swift in Sources */,
+				6D69719B2DD68C2500C214E8 /* NotePopupView.swift in Sources */,
+				6D6971972DD68BFD00C214E8 /* CalendarMonthView.swift in Sources */,
 				6D6971872DD4DCBE00C214E8 /* EditNoteView.swift in Sources */,
 				6D3D46652D8B124700F3E6E1 /* CalendarViewController.swift in Sources */,
 				6DC683272DC9172100332B7C /* SettingsRow.swift in Sources */,
@@ -437,11 +502,14 @@
 				6D3D46672D8B125300F3E6E1 /* SettingsViewController.swift in Sources */,
 				6D997A3F2D859D2F00C64705 /* AppDelegate.swift in Sources */,
 				6DB72F9C2D9084B700A0A553 /* View+Extension.swift in Sources */,
+				6D6971992DD68C1300C214E8 /* DayView.swift in Sources */,
 				6DC683252DC8EF8100332B7C /* NoteView.swift in Sources */,
 				6DB72F9E2D9084C600A0A553 /* Date+Extension.swift in Sources */,
+				6D69718F2DD68B5B00C214E8 /* NotificationModel.swift in Sources */,
 				6D60CD1C2DC2E598006E5355 /* OffsetKey.swift in Sources */,
 				6D1443C72DA79C1A00BF0E0F /* SettingsView.swift in Sources */,
 				6D8D4BBA2DB9A6FA0082CBFB /* DiaryCardView.swift in Sources */,
+				6D6971922DD68B9100C214E8 /* CalindarViewModel.swift in Sources */,
 				6D997A412D859D2F00C64705 /* SceneDelegate.swift in Sources */,
 				6D8D4B8D2DB6AB000082CBFB /* NoteStore.swift in Sources */,
 				6D61FC842DC6379B009198D2 /* Theme.swift in Sources */,
